@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="le">
   <meta name="keywords" content="">
-  <title>制作个人的 Cycling Page - Battle Le</title>
+  <title>「新玩意」Combat 2000「长舌包」 - Battle Le</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="制作个人的 Cycling Page">
+            <span class="h2" id="subtitle" title="「新玩意」Combat 2000「长舌包」">
               
             </span>
 
@@ -173,8 +173,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-03-09 12:10" pubdate>
-        March 9, 2021 pm
+      <time datetime="2021-08-05 21:15" pubdate>
+        August 5, 2021 pm
       </time>
     </span>
   
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      783 字
+      508 字
     </span>
   
 
@@ -216,56 +216,37 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">制作个人的 Cycling Page</h1>
+            <h1 style="display: none">「新玩意」Combat 2000「长舌包」</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：March 9, 2021 pm
+                  本文最后更新于：August 5, 2021 pm
                 
               </p>
             
             <div class="markdown-body">
-              <p><img src="https://i.imgur.com/DEaqf0L.png" srcset="/img/loading.gif"></p>
-<p>3.5 定的 Reminder，要把 Strava 连接 Garmin 的问题解决，没有解决反而是钻研了一个新玩意儿。在 TG 上搜 Strava 发现某个群聊里提及了一个<a target="_blank" rel="noopener" href="https://github.com/yihong0618/running_page">项目</a>，基于各种运动 App 打造个人跑步主页，点进去一看很 cool，比 Strava 年度总结的更美观，也做一个属于自己的出来。说干就干，打开文档，中英双语，professional（我的英语还有待加强）</p>
-<p><img src="https://i.imgur.com/DalFvff.png" srcset="/img/loading.gif" alt="这种类似思维导图很对我胃口"></p>
-<h2 id="开始动手"><a href="#开始动手" class="headerlink" title="开始动手"></a>开始动手</h2><p>然而第一步使用  <code>git clone</code> 就出现了问题……提示网络错误：</p>
-<p><strong>Failed to connect to 127.0.0.1 port 1080: Connection refused.</strong></p>
-<p>我以为是端口问题，把 Clash For Windows 默认的 port 7890 改成 1080 也无济于事，然后问谷老师（Google）答案，搜出来一堆教程都是在命令行配置代理：</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs verilog">$ git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> https<span class="hljs-variable">.proxy</span> http:<span class="hljs-comment">//127.0.0.1:1080</span><br></code></pre></td></tr></table></figure>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">$ git<span class="hljs-built_in"> config </span>--global http.proxy <span class="hljs-string">&#x27;socks5://127.0.0.1:1080&#x27;</span><br></code></pre></td></tr></table></figure>
-<p>诸如此类的，可是统统无用，修改 C:\Users\username\.gitconfig 里面的配置也无济于事。另一种方法用</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">cat ~<span class="hljs-string">/.gitconfig</span><br></code></pre></td></tr></table></figure>
-<p>来查看：</p>
-<p><img src="https://i.imgur.com/KXzX57a.png" srcset="/img/loading.gif" alt="cat ~/.gitconfig 后如图所示"></p>
-<p>然后 </p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">vim ~<span class="hljs-string">/.gitconfig</span> <br></code></pre></td></tr></table></figure>
-<p><img src="https://i.imgur.com/JW3dtwW.png" srcset="/img/loading.gif"></p>
-<p>键入 i 进行修改，按 Esc 退出编辑接着键入 :wq 回车完成修改。但是测试</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">curl www<span class="hljs-selector-class">.google</span>.com/curl -v www<span class="hljs-selector-class">.google</span><span class="hljs-selector-class">.com</span> <br></code></pre></td></tr></table></figure>
-<p>还是会超时，说明命令行还是没有走代理连接。</p>
-<p>换种花样出现 <strong>fatal: unable to access ‘xxx/‘: The requested URL returned error: 500</strong></p>
-<p>另一个安装方法，</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs groovy">git<span class="hljs-meta">@github</span>.<span class="hljs-attr">com:</span>xxx/xxx.git <br></code></pre></td></tr></table></figure>
-<p>则会显示:</p>
-<p><strong>bash: <a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#109;">&#103;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#109;</a>:xxx/xxx.git: No such file or directory</strong></p>
-<p>晕😵</p>
-<hr>
-<p>无奈，只好去作者的 Repo 下载 ZIP 到本地，不够 geek。</p>
-<h2 id="搞掂-Strava-Token"><a href="#搞掂-Strava-Token" class="headerlink" title="搞掂 Strava Token"></a>搞掂 Strava Token</h2><p><img src="https://i.imgur.com/RT1ZQJO.png" srcset="/img/loading.gif" alt="获取 Strava API Token "></p>
-<p>这个 Website 可以随便填，只要前面加上  <code>https:// </code></p>
-<p>需要注意这里的 client_id，<code>id=$&#123;66666&#125;&amp;</code> 后面直接跟数字,改为 <code>id=66666&amp;</code>，</p>
-<p>点击 Authorize 后会暂时出现页面无法访问，正常的。获取返回的 <strong>refresch_token</strong>，</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">curl</span> <span class="hljs-literal">-X</span> POST https://www.strava.com/oauth/token \<br><span class="hljs-operator">-F</span> client_id=<span class="hljs-variable">$</span>&#123;Your Client ID&#125; \<br><span class="hljs-operator">-F</span> client_secret=<span class="hljs-variable">$</span>&#123;Your Client Secret&#125; \<br><span class="hljs-operator">-F</span> code=<span class="hljs-variable">$</span>&#123;Your Code&#125; \<br><span class="hljs-operator">-F</span> grant_type=authorization_code<br></code></pre></td></tr></table></figure>
-<p>没有这个就会出错。因为我没有装 python，所以直接下一步。</p>
-<h2 id="GitHub-Actions"><a href="#GitHub-Actions" class="headerlink" title="GitHub Actions"></a>GitHub Actions</h2><p>Fork 仓库（其实第一步就应该做的）后，我多做了一步，把<a target="_blank" rel="noopener" href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">全局配置</a>的 token 给设置了。其实只要在 Fork 的 Repo 里</p>
-<p><img src="https://i.imgur.com/37dH5v7.png" srcset="/img/loading.gif"></p>
-<p>设置三个 token</p>
-<p><img src="https://i.imgur.com/QVUM7Qe.png" srcset="/img/loading.gif" alt="token 放进 Value 内"></p>
-<p><img src="https://i.imgur.com/ktbv3CD.png" srcset="/img/loading.gif" alt="看着转半天好忐忑……"></p>
-<p>最后就是部署到公网自己的域名，用 Vercel，只要注册个账号就可以了，很简单，不过要吐槽的是 Vercel 居然不能用 <a href="https://battlele.com/geek/">GV</a> 验证，比 PayPal 还严格啊，尝试了许久收不到 GV 短信，放弃。本想着之后换绑的，都没有找到换绑手机号的界面！</p>
-<p>之后绑定了我买了十年之久的数字域名，美滋滋，终于派上用场了。Github 太香了！然后吃完晚饭（捣鼓一天了）回来看 Push new runs 报错，问大神，原来是 scripts/data.db 文件出错，删了就好。我自己是找不到问题的……还有就是跑这个 Run workflow</p>
-<p><img src="https://i.imgur.com/LQ2lBpg.png" srcset="/img/loading.gif"></p>
-<p>一定要点进去运行。搞定后又去骑 Zwift，好肝的一天啊！不能熬夜，头开始难受了，早点睡，才能多骑车。</p>
+              <ul>
+<li>入手渠道：淘宝自购</li>
+<li>参考价格：121 元</li>
+</ul>
+<p><img src="https://i.imgur.com/0FxQbPU.jpg" srcset="/img/loading.gif" alt="小巧玲珑，一手掌握"></p>
+<p>前阵子经过台风袭击后，觉得有必要配置下个人医疗包（Individual First Aid Kit）或者叫单兵急救包，以备不时之需。考虑以下几点：</p>
+<ul>
+<li>体积要 4 L 以下（方便携带）</li>
+<li>Molle 系统（装具模块化系统）</li>
+<li>外壳防水</li>
+<li>多夹层设计</li>
+<li>最好有磁铁快拆设计（看起来酷一点）</li>
+</ul>
+<p>最重要是颜值能打，要有趣！</p>
+<p>我几乎看遍了国内外所有品牌，从传统战术厂商塔虎、5.11 看到国内新潮品牌狐蝠工业再到户外品牌神秘农场，千挑万选，或多或少有种种不足。后来看到这款国产 <strong>Combat 2000 的「长舌包」</strong>，第一眼觉得挺有趣，拉开拉链就像吐出的长舌头。这款包似乎是有原型，虽然我没有找到原版，但肯定有复刻的成分。价格很便宜，一百块出头，颜色很多，有灰色、黑色、狼棕色、游骑兵绿、multicam（多地形迷彩）。选择犹豫症犯了，最后选择不会出错的黑色，毕竟年轻人要低调点（狗头）。</p>
+<p><img src="https://i.imgur.com/j3wjA8G.jpg" srcset="/img/loading.gif"></p>
+<p>这个包的精髓就是在闭合状态下，只需要扯下 D 型拉环就可以快速打开，包体里面的物件一览无余，快速取物，符合急救包的使用场景。</p>
+<p><img src="https://i.imgur.com/ddoZSqS.jpg" srcset="/img/loading.gif"></p>
+<p><img src="https://i.imgur.com/YAcqc1w.jpg" srcset="/img/loading.gif"></p>
+<p>包身采用杜邦考杜拉面料，医疗包标配；特氟龙防泼水；顶部魔术贴面可以粘上喜欢的士气章，增添玩趣。可以搭配肩带斜挎携带。背部 Molle 系统可以挂在主包上，不怕少带一个包。</p>
+<p>总体来说是个性价比非常不错的小包，虽然没有磁铁快拆（也只有在狐蝠工业看到过），不会过于硬核，有 urban outdoor 风格。入门之选，买一个来把玩，关键时候还能派上大用场。</p>
+<p>P.S. 下次再来聊聊关于个人 EDC 的玩意儿。</p>
 
             </div>
             <hr>
@@ -275,7 +256,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/daily/">daily</a>
+                      <a class="hover-with-bg" href="/categories/course/">course</a>
                     
                   </div>
                 
@@ -283,7 +264,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/skill/">skill</a>
+                      <a class="hover-with-bg" href="/tags/life/">life</a>
+                    
+                      <a class="hover-with-bg" href="/tags/liqi/">liqi</a>
                     
                   </div>
                 
@@ -296,18 +279,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/anti-crash/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">我的防崩溃机制</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/the-Casual-vacancy/">
-                        <span class="hidden-mobile">啃旧书系列Ⅰ——The Casual Vacancy</span>
+                      <a href="/mx2s_fix/">
+                        <span class="hidden-mobile">Logi MX Master 2S Mouse 维修</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
