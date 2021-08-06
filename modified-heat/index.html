@@ -8,15 +8,16 @@
 <head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
+  <meta name="description" content="最近使用 PC 时风扇转速飙升厉害，发烫现象严重，寻思着用了两年多，散热硅脂减少造成的。先问了官方售后换一次散热硅脂几多钱，答复是**日本信越 7921** 的散热硅脂 120 元">
   <meta name="author" content="le">
   <meta name="keywords" content="">
+  
   <title>XPS 拆机换硅脂 - Battle Le</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
@@ -55,7 +56,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"battlele.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":null,"google":"UA-161026029-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null},"tajs":null}};
+    var CONFIG = {"hostname":"battlele.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":null,"google":"UA-161026029-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null},"tajs":null},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -142,13 +143,13 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
                 class="iconfont icon-search"></i>&nbsp;</a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" href="javascript:">&nbsp;<i
+            <a class="nav-link" target="_self">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -234,26 +235,26 @@
 <li>酒精片</li>
 <li>毛巾</li>
 </ol>
-<h2 id="拆机盖"><a href="#拆机盖" class="headerlink" title="拆机盖"></a>拆机盖</h2><p><img src="https://i.imgur.com/iVCV4lJ.jpg" srcset="/img/loading.gif" alt="拆机盖"></p>
+<h2 id="拆机盖"><a href="#拆机盖" class="headerlink" title="拆机盖"></a>拆机盖</h2><p><img src="https://i.imgur.com/iVCV4lJ.jpg" srcset="/img/loading.gif" lazyload alt="拆机盖"></p>
 <p>垫好毛巾，以免刮伤。第一步是最难的，要拆开基座护盖。得从中部挖出一道缝，用垫片塞进去，然后往两边划，但是不能太用力，我就因为经验不足在接口处把一块塑料翘断，还破坏了扬声器上的镀膜。不应该一个劲的划，而是慢慢的的顶，使卡扣分离，总之大力出悲剧！</p>
-<p><img src="https://i.imgur.com/kn3SFZq.jpg" srcset="/img/loading.gif"></p>
+<p><img src="https://i.imgur.com/kn3SFZq.jpg" srcset="/img/loading.gif" lazyload></p>
 <p>打开之后一块裸露的主板就出现在我眼前，不亏是 XPS，整合度很高，虽然我也没拆过别的什么机型，但是设计巧妙，排布合理，就像打开汽车引擎盖里面平整简洁的那种感觉。</p>
 <h2 id="拆电池"><a href="#拆电池" class="headerlink" title="拆电池"></a>拆电池</h2><p>开盖后无论什么操作（除非只是打开盖子来看一看）都要先断开电源，以免受伤（说的是机器）。在电源排线两端用指甲扣住一推就开（研究了好久），拧下四颗（M2x2）以及一颗（M1.6x4）螺钉。电池上面写着螺丝规格，好评。然而我的螺丝刀并不是这么命名的，好久才找到适合的螺丝刀。科普一下：十字型螺丝 Phillips 是由 Henry.Phillips 在二十世纪三十年代发明。卸下电池后按住电源键十秒把残留电流放光。</p>
 <p>电池做的非常薄，才能塞进这薄薄的机身，52 Wh 电池由四块小电池组成。用了两年轻度使用续航有 6 小时。</p>
-<h2 id="拆风扇"><a href="#拆风扇" class="headerlink" title="拆风扇"></a>拆风扇</h2><p><img src="https://i.imgur.com/x1tP2jU.jpg" srcset="/img/loading.gif" alt="卸下风扇"></p>
+<h2 id="拆风扇"><a href="#拆风扇" class="headerlink" title="拆风扇"></a>拆风扇</h2><p><img src="https://i.imgur.com/x1tP2jU.jpg" srcset="/img/loading.gif" lazyload alt="卸下风扇"></p>
 <p>拧下固定无线天线和摄像头电线的螺钉（M1.6x3），把金属盖片的排线接口断开</p>
-<p><img src="https://i.imgur.com/KIwrIOl.jpg" srcset="/img/loading.gif" alt="卸下风扇 2"></p>
+<p><img src="https://i.imgur.com/KIwrIOl.jpg" srcset="/img/loading.gif" lazyload alt="卸下风扇 2"></p>
 <p>接着把风扇的两个排线断开，再把固定风扇的两颗螺钉（M1.6x3）拧下</p>
 <h2 id="拆散热器"><a href="#拆散热器" class="headerlink" title="拆散热器"></a>拆散热器</h2><p>最后就是拧下散热器的四颗螺钉（M2x3），在黑色的散热器上用数字写着对角线拧螺丝的顺序，再次好评。</p>
-<p><img src="https://i.imgur.com/iMvbD1H.jpg" srcset="/img/loading.gif" alt="拆散热器打 "></p>
+<p><img src="https://i.imgur.com/iMvbD1H.jpg" srcset="/img/loading.gif" lazyload alt="拆散热器打 "></p>
 <p>这里的 M2x3 螺丝和 D 面的一样，只是后者是 Torx 梅花形状，前者是十字的，然而工具不够好，滑丝了！没办法只好用一字型螺丝刀强行拧开。拿开散热器就能清理风扇背面，居然没有什么灰尘，挺干净。</p>
-<p><img src="https://i.imgur.com/AKWm9MZ.jpeg" srcset="/img/loading.gif" alt="散热铜片"></p>
-<p><img src="https://i.imgur.com/upGsYsO.jpeg" srcset="/img/loading.gif"></p>
+<p><img src="https://i.imgur.com/AKWm9MZ.jpeg" srcset="/img/loading.gif" lazyload alt="散热铜片"></p>
+<p><img src="https://i.imgur.com/upGsYsO.jpeg" srcset="/img/loading.gif" lazyload></p>
 <blockquote>
 <p>前后对比</p>
 </blockquote>
 <p>把铜片上和芯片上的硅脂刮干净，用酒精片擦拭，待干之后拿出等待已久的 7921 硅脂，在芯片上画了个 ×，直接把铜片盖回去，真男人从不回头😎 </p>
-<p><img src="https://i.imgur.com/H6YED9k.jpg" srcset="/img/loading.gif" alt="抹散热硅脂"></p>
+<p><img src="https://i.imgur.com/H6YED9k.jpg" srcset="/img/loading.gif" lazyload alt="抹散热硅脂"></p>
 <blockquote>
 <p>3 克硅脂能用好几回！</p>
 </blockquote>
@@ -290,7 +291,11 @@
                 
               </div>
               
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
               
               
                 <div class="post-prevnext">
@@ -405,7 +410,6 @@
 
 <script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
 <script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
@@ -413,7 +417,7 @@
 
 
   
-    <script  src="/js/lazyload.js" ></script>
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
@@ -436,6 +440,10 @@
 
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
 
 
 
@@ -448,20 +456,6 @@
       typing(title)
       
     })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      var inputArea = document.querySelector("#local-search-input");
-      inputArea.onclick = function () {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-        this.onclick = null
-      }
-    })()
   </script>
 
 
@@ -503,6 +497,110 @@
 <!-- 主题的启动项 保持在最底部 -->
 <script  src="/js/boot.js" ></script>
 
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'UA-161026029-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
 
 
 </body>

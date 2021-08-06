@@ -8,15 +8,16 @@
 <head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
+  <meta name="description" content="可以把自己的运动数据生成在个人页面，简单直接又美观……">
   <meta name="author" content="le">
   <meta name="keywords" content="">
+  
   <title>制作个人的 Cycling Page - Battle Le</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
@@ -55,7 +56,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"battlele.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":null,"google":"UA-161026029-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null},"tajs":null}};
+    var CONFIG = {"hostname":"battlele.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":null,"google":"UA-161026029-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null},"tajs":null},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -142,13 +143,13 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
                 class="iconfont icon-search"></i>&nbsp;</a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" href="javascript:">&nbsp;<i
+            <a class="nav-link" target="_self">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -225,9 +226,9 @@
               </p>
             
             <div class="markdown-body">
-              <p><img src="https://i.imgur.com/DEaqf0L.png" srcset="/img/loading.gif"></p>
+              <p><img src="https://i.imgur.com/DEaqf0L.png" srcset="/img/loading.gif" lazyload></p>
 <p>3.5 定的 Reminder，要把 Strava 连接 Garmin 的问题解决，没有解决反而是钻研了一个新玩意儿。在 TG 上搜 Strava 发现某个群聊里提及了一个<a target="_blank" rel="noopener" href="https://github.com/yihong0618/running_page">项目</a>，基于各种运动 App 打造个人跑步主页，点进去一看很 cool，比 Strava 年度总结的更美观，也做一个属于自己的出来。说干就干，打开文档，中英双语，professional（我的英语还有待加强）</p>
-<p><img src="https://i.imgur.com/DalFvff.png" srcset="/img/loading.gif" alt="这种类似思维导图很对我胃口"></p>
+<p><img src="https://i.imgur.com/DalFvff.png" srcset="/img/loading.gif" lazyload alt="这种类似思维导图很对我胃口"></p>
 <h2 id="开始动手"><a href="#开始动手" class="headerlink" title="开始动手"></a>开始动手</h2><p>然而第一步使用  <code>git clone</code> 就出现了问题……提示网络错误：</p>
 <p><strong>Failed to connect to 127.0.0.1 port 1080: Connection refused.</strong></p>
 <p>我以为是端口问题，把 Clash For Windows 默认的 port 7890 改成 1080 也无济于事，然后问谷老师（Google）答案，搜出来一堆教程都是在命令行配置代理：</p>
@@ -236,10 +237,10 @@
 <p>诸如此类的，可是统统无用，修改 C:\Users\username\.gitconfig 里面的配置也无济于事。另一种方法用</p>
 <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">cat ~<span class="hljs-string">/.gitconfig</span><br></code></pre></td></tr></table></figure>
 <p>来查看：</p>
-<p><img src="https://i.imgur.com/KXzX57a.png" srcset="/img/loading.gif" alt="cat ~/.gitconfig 后如图所示"></p>
+<p><img src="https://i.imgur.com/KXzX57a.png" srcset="/img/loading.gif" lazyload alt="cat ~/.gitconfig 后如图所示"></p>
 <p>然后 </p>
 <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">vim ~<span class="hljs-string">/.gitconfig</span> <br></code></pre></td></tr></table></figure>
-<p><img src="https://i.imgur.com/JW3dtwW.png" srcset="/img/loading.gif"></p>
+<p><img src="https://i.imgur.com/JW3dtwW.png" srcset="/img/loading.gif" lazyload></p>
 <p>键入 i 进行修改，按 Esc 退出编辑接着键入 :wq 回车完成修改。但是测试</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">curl www<span class="hljs-selector-class">.google</span>.com/curl -v www<span class="hljs-selector-class">.google</span><span class="hljs-selector-class">.com</span> <br></code></pre></td></tr></table></figure>
 <p>还是会超时，说明命令行还是没有走代理连接。</p>
@@ -247,24 +248,24 @@
 <p>另一个安装方法，</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs groovy">git<span class="hljs-meta">@github</span>.<span class="hljs-attr">com:</span>xxx/xxx.git <br></code></pre></td></tr></table></figure>
 <p>则会显示:</p>
-<p><strong>bash: <a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#109;">&#103;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#109;</a>:xxx/xxx.git: No such file or directory</strong></p>
+<p><strong>bash: <a href="mailto:&#103;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;">&#103;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;</a>:xxx/xxx.git: No such file or directory</strong></p>
 <p>晕😵</p>
 <hr>
 <p>无奈，只好去作者的 Repo 下载 ZIP 到本地，不够 geek。</p>
-<h2 id="搞掂-Strava-Token"><a href="#搞掂-Strava-Token" class="headerlink" title="搞掂 Strava Token"></a>搞掂 Strava Token</h2><p><img src="https://i.imgur.com/RT1ZQJO.png" srcset="/img/loading.gif" alt="获取 Strava API Token "></p>
+<h2 id="搞掂-Strava-Token"><a href="#搞掂-Strava-Token" class="headerlink" title="搞掂 Strava Token"></a>搞掂 Strava Token</h2><p><img src="https://i.imgur.com/RT1ZQJO.png" srcset="/img/loading.gif" lazyload alt="获取 Strava API Token "></p>
 <p>这个 Website 可以随便填，只要前面加上  <code>https:// </code></p>
 <p>需要注意这里的 client_id，<code>id=$&#123;66666&#125;&amp;</code> 后面直接跟数字,改为 <code>id=66666&amp;</code>，</p>
 <p>点击 Authorize 后会暂时出现页面无法访问，正常的。获取返回的 <strong>refresch_token</strong>，</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">curl</span> <span class="hljs-literal">-X</span> POST https://www.strava.com/oauth/token \<br><span class="hljs-operator">-F</span> client_id=<span class="hljs-variable">$</span>&#123;Your Client ID&#125; \<br><span class="hljs-operator">-F</span> client_secret=<span class="hljs-variable">$</span>&#123;Your Client Secret&#125; \<br><span class="hljs-operator">-F</span> code=<span class="hljs-variable">$</span>&#123;Your Code&#125; \<br><span class="hljs-operator">-F</span> grant_type=authorization_code<br></code></pre></td></tr></table></figure>
 <p>没有这个就会出错。因为我没有装 python，所以直接下一步。</p>
 <h2 id="GitHub-Actions"><a href="#GitHub-Actions" class="headerlink" title="GitHub Actions"></a>GitHub Actions</h2><p>Fork 仓库（其实第一步就应该做的）后，我多做了一步，把<a target="_blank" rel="noopener" href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">全局配置</a>的 token 给设置了。其实只要在 Fork 的 Repo 里</p>
-<p><img src="https://i.imgur.com/37dH5v7.png" srcset="/img/loading.gif"></p>
+<p><img src="https://i.imgur.com/37dH5v7.png" srcset="/img/loading.gif" lazyload></p>
 <p>设置三个 token</p>
-<p><img src="https://i.imgur.com/QVUM7Qe.png" srcset="/img/loading.gif" alt="token 放进 Value 内"></p>
-<p><img src="https://i.imgur.com/ktbv3CD.png" srcset="/img/loading.gif" alt="看着转半天好忐忑……"></p>
+<p><img src="https://i.imgur.com/QVUM7Qe.png" srcset="/img/loading.gif" lazyload alt="token 放进 Value 内"></p>
+<p><img src="https://i.imgur.com/ktbv3CD.png" srcset="/img/loading.gif" lazyload alt="看着转半天好忐忑……"></p>
 <p>最后就是部署到公网自己的域名，用 Vercel，只要注册个账号就可以了，很简单，不过要吐槽的是 Vercel 居然不能用 <a href="https://battlele.com/geek/">GV</a> 验证，比 PayPal 还严格啊，尝试了许久收不到 GV 短信，放弃。本想着之后换绑的，都没有找到换绑手机号的界面！</p>
 <p>之后绑定了我买了十年之久的数字域名，美滋滋，终于派上用场了。Github 太香了！然后吃完晚饭（捣鼓一天了）回来看 Push new runs 报错，问大神，原来是 scripts/data.db 文件出错，删了就好。我自己是找不到问题的……还有就是跑这个 Run workflow</p>
-<p><img src="https://i.imgur.com/LQ2lBpg.png" srcset="/img/loading.gif"></p>
+<p><img src="https://i.imgur.com/LQ2lBpg.png" srcset="/img/loading.gif" lazyload></p>
 <p>一定要点进去运行。搞定后又去骑 Zwift，好肝的一天啊！不能熬夜，头开始难受了，早点睡，才能多骑车。</p>
 
             </div>
@@ -289,7 +290,11 @@
                 
               </div>
               
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
               
               
                 <div class="post-prevnext">
@@ -404,7 +409,6 @@
 
 <script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
 <script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
@@ -412,7 +416,7 @@
 
 
   
-    <script  src="/js/lazyload.js" ></script>
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
@@ -435,6 +439,10 @@
 
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
 
 
 
@@ -447,20 +455,6 @@
       typing(title)
       
     })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      var inputArea = document.querySelector("#local-search-input");
-      inputArea.onclick = function () {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-        this.onclick = null
-      }
-    })()
   </script>
 
 
@@ -502,6 +496,110 @@
 <!-- 主题的启动项 保持在最底部 -->
 <script  src="/js/boot.js" ></script>
 
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'UA-161026029-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
 
 
 </body>

@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -17,6 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="le">
   <meta name="keywords" content="">
+  
   <title>Battle Le</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
@@ -39,7 +40,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"battlele.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":null,"google":"UA-161026029-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null},"tajs":null}};
+    var CONFIG = {"hostname":"battlele.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":null,"google":"UA-161026029-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null},"tajs":null},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -126,13 +127,13 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
                 class="iconfont icon-search"></i>&nbsp;</a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" href="javascript:">&nbsp;<i
+            <a class="nav-link" target="_self">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -142,7 +143,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('https://i.imgur.com/eu4xQfu.jpeg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.2)">
@@ -181,18 +182,20 @@
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/ifak-combat2000/" target="_self">
-          <img src="https://i.imgur.com/0FxQbPU.jpg" srcset="/img/loading.gif" alt="「新玩意」Combat 2000「长舌包」">
+          <img src="https://i.imgur.com/0FxQbPU.jpg" srcset="/img/loading.gif" lazyload alt="「新玩意」Combat 2000「长舌包」">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/ifak-combat2000/">「新玩意」Combat 2000「长舌包」</a>
+        <a href="/ifak-combat2000/" target="_self">
+          「新玩意」Combat 2000「长舌包」
+        </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/ifak-combat2000/">
+        <a href="/ifak-combat2000/" target="_self">
           
           
             
@@ -230,18 +233,20 @@
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/mx2s_fix/" target="_self">
-          <img src="https://i.imgur.com/UHO7N6w.jpg" srcset="/img/loading.gif" alt="Logi MX Master 2S Mouse 维修">
+          <img src="https://i.imgur.com/UHO7N6w.jpg" srcset="/img/loading.gif" lazyload alt="Logi MX Master 2S Mouse 维修">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/mx2s_fix/">Logi MX Master 2S Mouse 维修</a>
+        <a href="/mx2s_fix/" target="_self">
+          Logi MX Master 2S Mouse 维修
+        </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/mx2s_fix/">
+        <a href="/mx2s_fix/" target="_self">
           
           
             
@@ -279,18 +284,20 @@
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/shuangchengji/" target="_self">
-          <img src="https://i.imgur.com/xmH1XdG.jpg" srcset="/img/loading.gif" alt="双城记">
+          <img src="https://i.imgur.com/xmH1XdG.jpg" srcset="/img/loading.gif" lazyload alt="双城记">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/shuangchengji/">双城记</a>
+        <a href="/shuangchengji/" target="_self">
+          双城记
+        </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/shuangchengji/">
+        <a href="/shuangchengji/" target="_self">
           
           
             
@@ -326,18 +333,20 @@
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/diy-ssd/" target="_self">
-          <img src="https://i.imgur.com/O4AwfN4.png" srcset="/img/loading.gif" alt="DIY SSD 测试">
+          <img src="https://i.imgur.com/O4AwfN4.png" srcset="/img/loading.gif" lazyload alt="DIY SSD 测试">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/diy-ssd/">DIY SSD 测试</a>
+        <a href="/diy-ssd/" target="_self">
+          DIY SSD 测试
+        </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/diy-ssd/">
+        <a href="/diy-ssd/" target="_self">
           
           
             
@@ -375,18 +384,20 @@
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/anti-crash/" target="_self">
-          <img src="https://i.imgur.com/morE6CQ.png" srcset="/img/loading.gif" alt="我的防崩溃机制">
+          <img src="https://i.imgur.com/morE6CQ.png" srcset="/img/loading.gif" lazyload alt="我的防崩溃机制">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/anti-crash/">我的防崩溃机制</a>
+        <a href="/anti-crash/" target="_self">
+          我的防崩溃机制
+        </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/anti-crash/">
+        <a href="/anti-crash/" target="_self">
           
           
             
@@ -422,18 +433,20 @@
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/cycling-page/" target="_self">
-          <img src="https://i.imgur.com/6D3eS12.png" srcset="/img/loading.gif" alt="制作个人的 Cycling Page">
+          <img src="https://i.imgur.com/6D3eS12.png" srcset="/img/loading.gif" lazyload alt="制作个人的 Cycling Page">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/cycling-page/">制作个人的 Cycling Page</a>
+        <a href="/cycling-page/" target="_self">
+          制作个人的 Cycling Page
+        </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/cycling-page/">
+        <a href="/cycling-page/" target="_self">
           
           
             
@@ -469,18 +482,20 @@
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/the-Casual-vacancy/" target="_self">
-          <img src="https://i.imgur.com/wLG5zJr.jpg" srcset="/img/loading.gif" alt="啃旧书系列Ⅰ——The Casual Vacancy">
+          <img src="https://i.imgur.com/wLG5zJr.jpg" srcset="/img/loading.gif" lazyload alt="啃旧书系列Ⅰ——The Casual Vacancy">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/the-Casual-vacancy/">啃旧书系列Ⅰ——The Casual Vacancy</a>
+        <a href="/the-Casual-vacancy/" target="_self">
+          啃旧书系列Ⅰ——The Casual Vacancy
+        </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/the-Casual-vacancy/">
+        <a href="/the-Casual-vacancy/" target="_self">
           
           
             
@@ -516,18 +531,20 @@
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/iphone-12-mini/" target="_self">
-          <img src="https://i.imgur.com/He0BAwt.jpg" srcset="/img/loading.gif" alt="三年之痒——iPhone 12 mini">
+          <img src="https://i.imgur.com/He0BAwt.jpg" srcset="/img/loading.gif" lazyload alt="三年之痒——iPhone 12 mini">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/iphone-12-mini/">三年之痒——iPhone 12 mini</a>
+        <a href="/iphone-12-mini/" target="_self">
+          三年之痒——iPhone 12 mini
+        </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/iphone-12-mini/">
+        <a href="/iphone-12-mini/" target="_self">
           
           
             
@@ -563,18 +580,20 @@
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/s3710/" target="_self">
-          <img src="https://i.imgur.com/HMIp0r3.jpg" srcset="/img/loading.gif" alt="不折腾会死之 SSD S3710">
+          <img src="https://i.imgur.com/HMIp0r3.jpg" srcset="/img/loading.gif" lazyload alt="不折腾会死之 SSD S3710">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/s3710/">不折腾会死之 SSD S3710</a>
+        <a href="/s3710/" target="_self">
+          不折腾会死之 SSD S3710
+        </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/s3710/">
+        <a href="/s3710/" target="_self">
           
           
             
@@ -610,18 +629,20 @@
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/xian/" target="_self">
-          <img src="https://i.imgur.com/cuBAuTA.jpg" srcset="/img/loading.gif" alt="年末访古都">
+          <img src="https://i.imgur.com/cuBAuTA.jpg" srcset="/img/loading.gif" lazyload alt="年末访古都">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/xian/">年末访古都</a>
+        <a href="/xian/" target="_self">
+          年末访古都
+        </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/xian/">
+        <a href="/xian/" target="_self">
           
           
             
@@ -656,15 +677,9 @@
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-arrowright"></i></a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
-  
-  <script>
-    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
-      ele.href += '#board';
-    }
-  </script>
 
 
 
@@ -740,7 +755,6 @@
 
 <script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
 <script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
@@ -748,7 +762,7 @@
 
 
   
-    <script  src="/js/lazyload.js" ></script>
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
@@ -767,6 +781,10 @@
 
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
 
 
 
@@ -779,20 +797,6 @@
       typing(title)
       
     })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      var inputArea = document.querySelector("#local-search-input");
-      inputArea.onclick = function () {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-        this.onclick = null
-      }
-    })()
   </script>
 
 
@@ -834,6 +838,106 @@
 <!-- 主题的启动项 保持在最底部 -->
 <script  src="/js/boot.js" ></script>
 
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'UA-161026029-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
 
 
 </body>

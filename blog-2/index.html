@@ -8,15 +8,16 @@
 <head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
+  <meta name="description" content="手好了又开始瞎折腾，开始漫长的出错之旅……">
   <meta name="author" content="le">
   <meta name="keywords" content="">
+  
   <title>一些 Blog 的疑难杂症 - Battle Le</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
@@ -55,7 +56,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"battlele.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":null,"google":"UA-161026029-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null},"tajs":null}};
+    var CONFIG = {"hostname":"battlele.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":null,"google":"UA-161026029-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null},"tajs":null},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -142,13 +143,13 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
                 class="iconfont icon-search"></i>&nbsp;</a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" href="javascript:">&nbsp;<i
+            <a class="nav-link" target="_self">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -244,7 +245,7 @@
 <p>后面就有一长串安装成功的版本信息，</p>
 </li>
 </ol>
-<p><img src="https://i.imgur.com/zPfaKCJ.png" srcset="/img/loading.gif"></p>
+<p><img src="https://i.imgur.com/zPfaKCJ.png" srcset="/img/loading.gif" lazyload></p>
 <p>在升级插件的过程中会有提示 Yes or No，只需连续按回车键。安装中没有进度条，等待的过程比较焦急，光标若是在闪烁且没有指令出来就是正在加载……升级到最新的 5.1.1（GitHub 上最新版）。渲染问题仍未解决，后来我找到使用 <code>\&#39;</code> 这个反斜杠转义来解决。</p>
 <h2 id="升级主题"><a href="#升级主题" class="headerlink" title="升级主题"></a>升级主题</h2><p>之前（并不是这个）的 Melody 也可以升级，进入官方文档（Hexo 版本 &gt;= 5.0）只需要键入</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">npm install hexo-theme-melody<br></code></pre></td></tr></table></figure>
@@ -270,8 +271,8 @@
 <p>再生成 SSH 密钥</p>
 <figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs excel">ssh-keygen -<span class="hljs-built_in">t</span> rsa -C <span class="hljs-string">&quot;GitHub 注册邮箱&quot;</span><br></code></pre></td></tr></table></figure>
 <p>接着三个回车，不需要设置<strong>密码</strong>，在 .ssh 文件夹的 id_rsa.pub 文件复制全部内容，打开 <a target="_blank" rel="noopener" href="https://github.com/settings/keys">GitHub_Settings_keys</a>，点 New SSH key，Title 随便写，然后在 Git Bash 检测 SSH key 是否设置成功，输入 <code>ssh -T git@github.com</code>，原理是公钥放在 GitHub，私钥放在电脑里。GitHub 每次都要验证是不是你，为了方便，采用 SSH，所以需要私钥跟 GitHub 公钥配对，然而我就遇到了无法配对的情况，这是第二个大坑！</p>
-<p><img src="https://i.imgur.com/voONH2V.png" srcset="/img/loading.gif"></p>
-<p>「ssh -T <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;">&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;</a> ssh: connect to host github. com port 22: Connection timed out」显示超时，GitHub 被污染严重，国内用户常常头疼……</p>
+<p><img src="https://i.imgur.com/voONH2V.png" srcset="/img/loading.gif" lazyload></p>
+<p>「ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#109;">&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#109;</a> ssh: connect to host github. com port 22: Connection timed out」显示超时，GitHub 被污染严重，国内用户常常头疼……</p>
 <p>后来找到的解决方法：</p>
 <ol>
 <li><p>打开 _config.yml 配置文件</p>
@@ -281,14 +282,14 @@
 </ol>
 <p>deploy:</p>
 <p>type: &#39;git&#39;</p>
-<p>repo: <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#98;&#46;&#99;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#98;&#46;&#99;&#x6f;&#x6d;</a>:yourname/yourname.github.io.git</p>
+<p>repo: <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#x75;&#98;&#46;&#x63;&#x6f;&#109;">&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#x75;&#98;&#46;&#x63;&#x6f;&#109;</a>:yourname/yourname.github.io.git</p>
 <p>branch: master</p>
 <p>其实这个问题很简单，但是我没有仔细 Google，或者说以为问题不是这样解决的，浪费了大量时间，<strong>以后遇到问题应该什么方法都试一下，反正已经出错了也不怕再糟糕。</strong></p>
 <p>然后绑定自己的顶级域名 <a href="https://battlele.com/blog/">具体操作</a> 不赘述，不想花钱买也可以用 GitHub 的。</p>
 <h2 id="Fatal"><a href="#Fatal" class="headerlink" title="Fatal"></a>Fatal</h2><p>想试下广受好评的 NexT 主题，直接 <code>npm install hexo-theme-next</code>，我打开  themes 没有看到文件夹以为安装失败，随后才知道，Hexo 5.0 之后更换了安装方式。主题文件夹位于 node_modules，安装前还是要阅读主题说明文档（论看资料的重要性），在接下来的步骤我居然又遇到了<strong>「Spawn failed」</strong>问题！再次搜索找到使用 <code>git reset --hard commitId</code> 的方法，这个 commitId 让我搞不懂，在高人指点下才知道这是一串 GitHub 上 commit 的 sha 码，但是回滚无效（写这篇 blog 时候看到 <code>git push -f</code> 有效。未验证）就此陷入死循环，再次搁置，看看教学视频缓解下急躁的心情。半夜在 Hexo 博客群友的再次提醒下 <code>hexo init test</code> 检查，还是配置文件问题，发现</p>
 <p>deploy:</p>
 <p>type: &#39;git&#39;</p>
-<p>repo: <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#x69;&#x74;&#x40;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:yourname/yourname.github.io.git</p>
+<p>repo: <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;">&#103;&#105;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;</a>:yourname/yourname.github.io.git</p>
 <p>branch: master</p>
 <p>里面居然有个中文？！去掉后万事大吉，天哪，真是太为难我。</p>
 <h2 id="新主题"><a href="#新主题" class="headerlink" title="新主题"></a>新主题</h2><p>熬到很晚，睡了一觉，起床已经是我最爱的九月了！之前的一波三折消耗我的耐心，决定再换个新主题，看了一圈，喜欢卡片式设计看到这个主题 Fluid，虽然没有液体的感觉，但是够简洁，之前就注意过，最近才更新，就你了。虽然没有 npm 安装，但是压缩包解压到 themes 不会出错，在安装过程中又报错，我心里咯噔一下，但是经过之前的波折，平稳许多，根据报错提示，是 Melody 和 NexT 主题插件加载失败错误，搜索后：</p>
@@ -316,7 +317,7 @@
 <p>感谢在我焦急的时候给予帮助的人们🙏</p>
 <p>P.S. 已经连续熬夜一个月，该早点洗洗睡了，我又不是程序员……</p>
 <p>2021.2.11 除夕夜九点半更新：</p>
-<p><img src="https://i.imgur.com/rcLvoBh.png" srcset="/img/loading.gif" alt="YAML 报错"></p>
+<p><img src="https://i.imgur.com/rcLvoBh.png" srcset="/img/loading.gif" lazyload alt="YAML 报错"></p>
 <p>昨天心浮气躁的找问题没解决，除夕之夜慢慢的找答案。<br>问过主题作者，说是配置文件出问题，在 Hexo 配置和主题配置反复查找，无果，也看不懂。<br>就像考试题目不会做，再看一遍题目吧，又看了报错内容，往下拉发现有一篇文章的 YAML Front Matter 赫然在目，找到这篇出错的文章，把 excerpt 精简，全换成英文冒号 + 空格，完美解决报错，解决问题的愉悦感浮上来。<br>So 除夕快乐呀~</p>
 
             </div>
@@ -341,7 +342,11 @@
                 
               </div>
               
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
               
               
                 <div class="post-prevnext">
@@ -456,7 +461,6 @@
 
 <script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
 <script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
@@ -464,7 +468,7 @@
 
 
   
-    <script  src="/js/lazyload.js" ></script>
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
@@ -487,6 +491,10 @@
 
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
 
 
 
@@ -499,20 +507,6 @@
       typing(title)
       
     })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      var inputArea = document.querySelector("#local-search-input");
-      inputArea.onclick = function () {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-        this.onclick = null
-      }
-    })()
   </script>
 
 
@@ -554,6 +548,110 @@
 <!-- 主题的启动项 保持在最底部 -->
 <script  src="/js/boot.js" ></script>
 
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    <!-- Google Analytics -->
+    <script defer>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+      ga.l = +new Date;
+      ga('create', 'UA-161026029-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
 
 
 </body>
