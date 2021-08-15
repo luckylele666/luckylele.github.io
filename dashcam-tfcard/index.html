@@ -14,11 +14,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="可以把自己的运动数据生成在个人页面，简单直接又美观……">
+  <meta name="description" content="呕心沥血几小时找出来的资料，对得起自己的强迫症了……">
   <meta name="author" content="le">
   <meta name="keywords" content="">
   
-  <title>制作个人的 Cycling Page - Battle Le</title>
+  <title>纸上谈兵之行车记录仪 - Battle Le</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -164,7 +164,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="制作个人的 Cycling Page">
+            <span class="h2" id="subtitle" title="纸上谈兵之行车记录仪">
               
             </span>
 
@@ -174,8 +174,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-03-09 12:10" pubdate>
-        March 9, 2021 pm
+      <time datetime="2021-08-15 22:35" pubdate>
+        August 15, 2021 pm
       </time>
     </span>
   
@@ -186,7 +186,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      783 字
+      1.1k 字
     </span>
   
 
@@ -217,56 +217,234 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">制作个人的 Cycling Page</h1>
+            <h1 style="display: none">纸上谈兵之行车记录仪</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：March 9, 2021 pm
+                  本文最后更新于：August 15, 2021 pm
                 
               </p>
             
             <div class="markdown-body">
-              <p><img src="https://i.imgur.com/DEaqf0L.png" srcset="/img/loading.gif" lazyload></p>
-<p>3.5 定的 Reminder，要把 Strava 连接 Garmin 的问题解决，没有解决反而是钻研了一个新玩意儿。在 TG 上搜 Strava 发现某个群聊里提及了一个<a target="_blank" rel="noopener" href="https://github.com/yihong0618/running_page">项目</a>，基于各种运动 App 打造个人跑步主页，点进去一看很 cool，比 Strava 年度总结的更美观，也做一个属于自己的出来。说干就干，打开文档，中英双语，professional（我的英语还有待加强）</p>
-<p><img src="https://i.imgur.com/DalFvff.png" srcset="/img/loading.gif" lazyload alt="这种类似思维导图很对我胃口"></p>
-<h2 id="开始动手"><a href="#开始动手" class="headerlink" title="开始动手"></a>开始动手</h2><p>然而第一步使用  <code>git clone</code> 就出现了问题……提示网络错误：</p>
-<p><strong>Failed to connect to 127.0.0.1 port 1080: Connection refused.</strong></p>
-<p>我以为是端口问题，把 Clash For Windows 默认的 port 7890 改成 1080 也无济于事，然后问谷老师（Google）答案，搜出来一堆教程都是在命令行配置代理：</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs verilog">$ git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> https<span class="hljs-variable">.proxy</span> http:<span class="hljs-comment">//127.0.0.1:1080</span><br></code></pre></td></tr></table></figure>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">$ git<span class="hljs-built_in"> config </span>--global http.proxy <span class="hljs-string">&#x27;socks5://127.0.0.1:1080&#x27;</span><br></code></pre></td></tr></table></figure>
-<p>诸如此类的，可是统统无用，修改 C:\Users\username\.gitconfig 里面的配置也无济于事。另一种方法用</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">cat ~<span class="hljs-string">/.gitconfig</span><br></code></pre></td></tr></table></figure>
-<p>来查看：</p>
-<p><img src="https://i.imgur.com/KXzX57a.png" srcset="/img/loading.gif" lazyload alt="cat ~/.gitconfig 后如图所示"></p>
-<p>然后 </p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">vim ~<span class="hljs-string">/.gitconfig</span> <br></code></pre></td></tr></table></figure>
-<p><img src="https://i.imgur.com/JW3dtwW.png" srcset="/img/loading.gif" lazyload></p>
-<p>键入 i 进行修改，按 Esc 退出编辑接着键入 :wq 回车完成修改。但是测试</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">curl www<span class="hljs-selector-class">.google</span>.com/curl -v www<span class="hljs-selector-class">.google</span><span class="hljs-selector-class">.com</span> <br></code></pre></td></tr></table></figure>
-<p>还是会超时，说明命令行还是没有走代理连接。</p>
-<p>换种花样出现 <strong>fatal: unable to access ‘xxx/‘: The requested URL returned error: 500</strong></p>
-<p>另一个安装方法，</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs groovy">git<span class="hljs-meta">@github</span>.<span class="hljs-attr">com:</span>xxx/xxx.git <br></code></pre></td></tr></table></figure>
-<p>则会显示:</p>
-<p><strong>bash: <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#99;&#x6f;&#x6d;">&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#99;&#x6f;&#x6d;</a>:xxx/xxx.git: No such file or directory</strong></p>
-<p>晕😵</p>
-<hr>
-<p>无奈，只好去作者的 Repo 下载 ZIP 到本地，不够 geek。</p>
-<h2 id="搞掂-Strava-Token"><a href="#搞掂-Strava-Token" class="headerlink" title="搞掂 Strava Token"></a>搞掂 Strava Token</h2><p><img src="https://i.imgur.com/RT1ZQJO.png" srcset="/img/loading.gif" lazyload alt="获取 Strava API Token "></p>
-<p>这个 Website 可以随便填，只要前面加上  <code>https:// </code></p>
-<p>需要注意这里的 client_id，<code>id=$&#123;66666&#125;&amp;</code> 后面直接跟数字,改为 <code>id=66666&amp;</code>，</p>
-<p>点击 Authorize 后会暂时出现页面无法访问，正常的。获取返回的 <strong>refresch_token</strong>，</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">curl</span> <span class="hljs-literal">-X</span> POST https://www.strava.com/oauth/token \<br><span class="hljs-operator">-F</span> client_id=<span class="hljs-variable">$</span>&#123;Your Client ID&#125; \<br><span class="hljs-operator">-F</span> client_secret=<span class="hljs-variable">$</span>&#123;Your Client Secret&#125; \<br><span class="hljs-operator">-F</span> code=<span class="hljs-variable">$</span>&#123;Your Code&#125; \<br><span class="hljs-operator">-F</span> grant_type=authorization_code<br></code></pre></td></tr></table></figure>
-<p>没有这个就会出错。因为我没有装 python，所以直接下一步。</p>
-<h2 id="GitHub-Actions"><a href="#GitHub-Actions" class="headerlink" title="GitHub Actions"></a>GitHub Actions</h2><p>Fork 仓库（其实第一步就应该做的）后，我多做了一步，把<a target="_blank" rel="noopener" href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">全局配置</a>的 token 给设置了。其实只要在 Fork 的 Repo 里</p>
-<p><img src="https://i.imgur.com/37dH5v7.png" srcset="/img/loading.gif" lazyload></p>
-<p>设置三个 token</p>
-<p><img src="https://i.imgur.com/QVUM7Qe.png" srcset="/img/loading.gif" lazyload alt="token 放进 Value 内"></p>
-<p><img src="https://i.imgur.com/ktbv3CD.png" srcset="/img/loading.gif" lazyload alt="看着转半天好忐忑……"></p>
-<p>最后就是部署到公网自己的域名，用 Vercel，只要注册个账号就可以了，很简单，不过要吐槽的是 Vercel 居然不能用 <a href="https://battlele.com/geek/">GV</a> 验证，比 PayPal 还严格啊，尝试了许久收不到 GV 短信，放弃。本想着之后换绑的，都没有找到换绑手机号的界面！</p>
-<p>之后绑定了我买了十年之久的数字域名，美滋滋，终于派上用场了。Github 太香了！然后吃完晚饭（捣鼓一天了）回来看 Push new runs 报错，问大神，原来是 scripts/data.db 文件出错，删了就好。我自己是找不到问题的……还有就是跑这个 Run workflow</p>
-<p><img src="https://i.imgur.com/LQ2lBpg.png" srcset="/img/loading.gif" lazyload></p>
-<p>一定要点进去运行。搞定后又去骑 Zwift，好肝的一天啊！不能熬夜，头开始难受了，早点睡，才能多骑车。</p>
+              <p>前几天的<a href="https://battlele.com/Vehicle-crash/">交通事故</a>后，我就想着买个行车记录仪，人在江湖飘，在车水马龙的城市道路上开车还是很有必要备一个的，也可以拍一下沿途美景做纪念。</p>
+<h2 id="三大件"><a href="#三大件" class="headerlink" title="三大件"></a>三大件</h2><p>行车记录仪最重要的就是</p>
+<ol>
+<li>处理器芯片</li>
+<li>图像传感器 Sensor</li>
+<li>镜头</li>
+</ol>
+<p>处理器前些年有美国安霸，GoPro 就是用的安霸定制版本，可是现在不对中国出口了，剩下的能选的有台湾联咏、华为海思还有宇达电通 Mio 的专用 AIT 芯片了，联咏要比海思的好一些。Sensor 有 Sony 和国产格科威两者，我肯定选前者啦。镜头现在都是 6 + 1 起步，有一片是红外滤光。</p>
+<h2 id="品牌挑选"><a href="#品牌挑选" class="headerlink" title="品牌挑选"></a>品牌挑选</h2><p>品牌选择，不考虑价格的话第一梯队有韩国兴科威，韩国口红姬，接着是台湾品牌 Mio 宇达电通、DOD  迪欧迪（也有说不是台湾品牌）、趴趴狗 PAPAGO，Garmin。</p>
+<p>国产新势力有盯盯拍、七十迈、凌度、360、海康威视、小米等，以低端产品为主，且口碑普遍不佳我就直接跳过不选了。</p>
+<p>太贵的不买，我就选择了中端产品最多的 PAPAGO，他一家的产品也够我选了。</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Price</th>
+<th>主控</th>
+<th>图像传感器</th>
+<th>镜头</th>
+<th>参数</th>
+<th>运行内存</th>
+<th>总评（越少越好）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PAPAGO GoSafe 560 Wifi</td>
+<td>￥419<br />⭐⭐</td>
+<td><strong>联咏 NT 96670</strong>（顶级芯片）<br />⭐</td>
+<td>Sony IMX 415 （800 w 像素，据说夜视效果目前最强）<br />⭐</td>
+<td>7G + 1R 镜头（F 1.6 光圈）<strong>150°广角</strong><br />⭐</td>
+<td>4K 30 帧、<strong>1080p 120 帧</strong>、<strong>WDR 宽动态</strong><br />⭐</td>
+<td>2  GB<br />⭐⭐</td>
+<td><strong>8</strong><br />⭐</td>
+</tr>
+<tr>
+<td>PAPAGO 315 Wifi</td>
+<td>￥355<br />⭐</td>
+<td>联咏 NT 96670<br />⭐</td>
+<td>格科威 4653 图像传感器（400 w 像素）<br />⭐⭐</td>
+<td>6G + 1R 镜头（F 1.6 光圈），150°广角<br />⭐⭐</td>
+<td>4K 30 帧<br />⭐⭐⭐⭐</td>
+<td>4  GB<br />⭐</td>
+<td>11⭐</td>
+</tr>
+<tr>
+<td>PAPAGO S36 4K</td>
+<td>￥729<br />⭐⭐⭐⭐</td>
+<td>海思 Hi 3559 双核芯片<br />⭐⭐</td>
+<td><strong>Sony IMX 317</strong> 图像传感器（850 w 像素，超过 800 w 的传感器，无插值，真 4K）<br />1.5 ⭐</td>
+<td>7G + 1R 镜头（<strong>F 1.8 光圈</strong>）140°广角<br />⭐</td>
+<td>4K 30 帧、1080p 120 帧动态抓拍、防抖<br />⭐⭐</td>
+<td>4  GB<br />⭐</td>
+<td>11.5⭐</td>
+</tr>
+<tr>
+<td>PAPAGO S36 4K Ⅱ</td>
+<td>￥629<br />⭐⭐⭐</td>
+<td>联咏 NT 96670<br />⭐</td>
+<td>Sony IMX 415<br />⭐</td>
+<td>6G + 1R 玻璃（F 1.8 光圈）140°<br />⭐⭐</td>
+<td>4K 30 帧、1080p 96 帧动态抓拍、防抖<br />⭐⭐⭐</td>
+<td>4  GB <br />⭐</td>
+<td>11⭐</td>
+</tr>
+</tbody></table>
+<p>综上所述，我选择了趴趴狗的 GoSafe 560 Wifi。选完机器还有东西不要忘记那就是 TF 卡，TF 卡可以粗浅的理解为小尺寸的 SD 卡。挑选这个也是挺有讲究的。</p>
+<h2 id="TF-卡篇"><a href="#TF-卡篇" class="headerlink" title="TF 卡篇"></a>TF 卡篇</h2><p><img src="https://i.imgur.com/KSftxTX.jpg" srcset="/img/loading.gif" lazyload alt="图片来自知乎用户——黄昏百分百，下同"></p>
+<p><img src="https://i.imgur.com/eBfzikP.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><strong>速度等级的判定标准是写入速度，而不是读取速度，在很多情况下，影响内存卡表现的最主要因素并不是写入速度，而是读取速度</strong></p>
+<p><img src="https://i.imgur.com/iAmF2p9.png" srcset="/img/loading.gif" lazyload alt="KIOXIA 铠侠官网 "></p>
+<p><img src="https://i.imgur.com/pGoSE3l.png" srcset="/img/loading.gif" lazyload alt="Kingston 官网"></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>EXCERIA High Endurance 高度耐用</th>
+<th>EXCERIA PLUS 铠侠极至光速</th>
+<th>Kingston High Endurance</th>
+<th>Kingston Canvas Go!Plus</th>
+<th>SanDisk High Endurance</th>
+<th>SanDisk Max Endurance</th>
+<th>SanDisk Extreme Pro 超极速</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>视频录制</td>
+<td>4K<br />⭐</td>
+<td>4K<br />⭐</td>
+<td>1080 p ❌</td>
+<td>4K<br />⭐</td>
+<td>4K<br />⭐</td>
+<td>4K<br />⭐</td>
+<td>4K<br />⭐</td>
+</tr>
+<tr>
+<td>读取/写入</td>
+<td>100/65  ⭐⭐⭐</td>
+<td>100/65  ⭐⭐⭐</td>
+<td>95/30<br />⭐⭐⭐⭐⭐</td>
+<td>100/70 (脚注 1)<br />⭐⭐</td>
+<td>100/40<br />⭐⭐⭐⭐</td>
+<td>100/40<br />⭐⭐⭐⭐</td>
+<td>100/90 (脚注 2)<br />⭐</td>
+</tr>
+<tr>
+<td>UHS速度等级</td>
+<td><strong>U3</strong><br />⭐</td>
+<td><strong>U3</strong><br />⭐</td>
+<td>U1<br />⭐⭐</td>
+<td><strong>U3</strong><br />⭐</td>
+<td>U1<br />⭐⭐</td>
+<td>U1<br />⭐⭐</td>
+<td>U1<br />⭐⭐</td>
+</tr>
+<tr>
+<td>视频速度等级</td>
+<td>V30  <br />⭐</td>
+<td>V30<br />⭐</td>
+<td>V10<br />⭐⭐</td>
+<td>V30<br />⭐</td>
+<td>V30<br />⭐</td>
+<td>V30<br />⭐</td>
+<td>V30<br />⭐</td>
+</tr>
+<tr>
+<td>应用性能等级</td>
+<td>A1<br />⭐⭐</td>
+<td>A1<br />⭐⭐</td>
+<td>A1<br />⭐⭐</td>
+<td><strong>A2</strong><br />⭐</td>
+<td>大概率 A1<br />⭐⭐</td>
+<td>A1<br />⭐⭐</td>
+<td><strong>A2</strong><br />⭐</td>
+</tr>
+<tr>
+<td>防水</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>防 X 射线</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>防震</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>防止过热/爆燃</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>寿命（不计入总评）</td>
+<td>10000 h</td>
+<td>未知</td>
+<td>26900 h</td>
+<td>未知</td>
+<td>5000 h</td>
+<td><strong>30000 h</strong></td>
+<td>未知</td>
+</tr>
+<tr>
+<td>保修期限</td>
+<td>3年<br />⭐⭐⭐</td>
+<td>5年<br />⭐⭐</td>
+<td>3 年<br />⭐⭐⭐</td>
+<td><strong>终身</strong><br />⭐</td>
+<td>2 年<br />⭐⭐⭐⭐</td>
+<td>5 年<br />⭐⭐</td>
+<td><strong>终身</strong><br />⭐</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>￥129<br />⭐⭐⭐</td>
+<td><strong>￥70</strong><br />⭐</td>
+<td>￥89.9<br />⭐⭐</td>
+<td>￥74.9<br />⭐</td>
+<td>￥69.9<br />⭐</td>
+<td>￥129<br />⭐⭐⭐</td>
+<td>￥129<br />⭐⭐⭐</td>
+</tr>
+<tr>
+<td>总结（越少越好）</td>
+<td>14⭐<br />④</td>
+<td>9⭐<br />②</td>
+<td>16⭐<br />⑦</td>
+<td><strong>8</strong>⭐<br />①</td>
+<td>15⭐<br />⑤</td>
+<td>15⭐<br />⑤</td>
+<td>10⭐<br />③</td>
+</tr>
+</tbody></table>
+<p>看完列出来的数据就发现很好玩了，铠侠和金士顿的网页做的最好，文档有中文版，不同型号的对比表格也很直观，别家的都感觉有点藏着掩着。但是这两家也都有没公布使用寿命的数据。SanDisk SKU 太多了，分为高速（普通）、极速（升级）、超极速（再升级）还有个 Extreme PRO  UHS-Ⅱ USB 3.0（最强版），读取速度高达 275 MB/s，价格想必也很美丽，就不摆上来了</p>
+<p>(脚注 1) 最高性能需要使用 MobileLite Plus microSD 读卡器可达到 170 MB/s。实际速度大概大于 104 MB/s。</p>
+<p>(脚注 2) 对于 64 GB-1 TB 容量：读取速度高达 <strong>170 MB</strong>/秒，采用专有技术，可达到高于 UHS-I 104 MB/秒的速度，需要可达到这样速度的兼容设备。说人话就是要用他家的读卡器。</p>
+<p>参考资料：<a target="_blank" rel="noopener" href="https://zhongce.sina.com.cn/article/view/40631/">TF、SD 卡科普</a></p>
 
             </div>
             <hr>
@@ -276,7 +454,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/daily/">daily</a>
+                      <a class="hover-with-bg" href="/categories/digital/">digital</a>
                     
                   </div>
                 
@@ -284,7 +462,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/skill/">skill</a>
+                      <a class="hover-with-bg" href="/tags/device/">device</a>
+                    
+                      <a class="hover-with-bg" href="/tags/geek/">geek</a>
                     
                   </div>
                 
@@ -301,18 +481,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/anti-crash/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">我的防崩溃机制</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/the-Casual-vacancy/">
-                        <span class="hidden-mobile">啃旧书系列Ⅰ——The Casual Vacancy</span>
+                      <a href="/Vehicle-crash/">
+                        <span class="hidden-mobile">小记交通事故之处理</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

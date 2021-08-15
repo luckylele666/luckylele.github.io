@@ -221,13 +221,13 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：September 26, 2020 am
+                  本文最后更新于：August 15, 2021 pm
                 
               </p>
             
             <div class="markdown-body">
-              <p>已经 2020 年，为啥要搭建一个自己的 Blog？原因很简单，想有个自己的 Kingdom，什么时候想到了就写一点。不用登录，没有那么多审查，排版随心所欲，主题也可以自己 DIY。自己集作者，编辑和出版社的功能于一体，想想都很棒😋</p>
-<p>漫漫假期，有的是时间,，Just Do It! 开始建造自己的 kingdom。</p>
+              <p>已经 2020 年，为啥要搭建一个自己的 Blog？原因很简单，想有个自己的 Kingdom，什么时候想到了就写一点。不用登录，没有那么多审查，排版随心所欲，主题也可以自己 DIY。自己集作者，编辑和出版社于一体，想想都很棒😋</p>
+<p>漫漫假期，有的是时间，Just Do It! 开始建造自己的 kingdom。</p>
 <h2 id="Domain-Name"><a href="#Domain-Name" class="headerlink" title="Domain Name"></a>Domain Name</h2><p>先在 Namesilo 买<strong>域名</strong>。常用的 com, net, org 都已注册，又探索了 me, io 这类「潮流」域名，花了两天。终于想出个满意的名字「Battlele」。本着时时刻刻对世界充满期待和挑战的心态，充满活力的去战斗！「battle」 和 「le」放在一起，简短有力。</p>
 <h2 id="Blog-选择"><a href="#Blog-选择" class="headerlink" title="Blog 选择"></a>Blog 选择</h2><p>起初找了个无需本地化部署和生成的方法，使用 <code>GitHub Action</code> 自动化流程。自己瞎折腾，<code>action</code> 老是出错，也不知道问题在哪，只能放弃。从流行程度上来说大致分为静态和动态两种 (当然还有许多种类)。</p>
 <p>动态：</p>
@@ -289,7 +289,7 @@
 <li>用 Markdown 写文章。通过 Git 推送到仓库后，网站自动更新发布上线！</li>
 <li>使用 <a target="_blank" rel="noopener" href="https://gohugo.io/">Hugo</a>/<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 等静态网站生成工具 DIY 主题。</li>
 </ol>
-<p>上述大致流程网上教程很多不再赘述，说下遇到的坑。「esayhexo」的非官方教程不是很推荐，教程没提配置 SSH Key 导致安装时一系列报错，一个个按图索骥解决，累！GitHub 被伟大防火墙 (GFW) 严重干扰，在线 clone 主题的速度很忧伤，每秒 6kb… 还是 release 找文件 down 到 theme 文件夹才是佳选😉 终于成功安装 <strong>git</strong> 和 <strong>node.js</strong> 。输入指令推荐用 git 而不是 Windows Power Shall (傻愣愣)。</p>
+<p>上述大致流程网上教程很多不再赘述，说下遇到的坑。「esayhexo」的非官方教程不是很推荐，教程没提配置 SSH Key 导致安装时一系列报错，一个个按图索骥解决，累！GitHub 被伟大防火墙 (GFW) 严重干扰，在线 clone 主题的速度很忧伤，每秒 6 kb… 还是 release 找文件 down 到 theme 文件夹才是佳选😉 终于成功安装 <strong>git</strong> 和 <strong>node.js</strong> 。输入指令推荐用 git 而不是 Windows Power Shall (傻愣愣)。</p>
 <p>GitHub 仓库无需 fork 别人仓库，新建即可。把名字改成 xxx.github.io (<strong>仓库名须和用户名一致</strong>) 。域名在 <code>page settings</code> 里手动输入，GitHub 还提供免费的证书😎</p>
 <p>需注意有些域名解析后才能使用，国内备案网站必须解析，我添加了 A 记录和 CNMAE 搞定。若要去掉 <code>www</code> 二级域名。在域名管理进行 DNS 解析，添加 A 记录<strong>重定向</strong>到域名 (能加两条就全加)。换句话说 A 记录就是 GitHub 仓库的 IP 地址，cmd 命令：ping + xxx.github.io 搞定。</p>
 <h2 id="捣鼓主题"><a href="#捣鼓主题" class="headerlink" title="捣鼓主题"></a>捣鼓主题</h2><p>安装主题后终于初步成功了！接下来各种优化和自定义。第一个 chic 主题玩了没两天就发现挺多 bug 的，前期还能折腾换了个主题。看用户最多的 NexT 已经审美疲劳，适合纯文字写作，不适合闷骚的我。</p>
